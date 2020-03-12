@@ -6,11 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="rgb.css">
-    <style></style>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+
+        .box {
+            display: flex;
+            /* background: #ccc; */
+        }
+
+        .item {
+            position: relative;
+            margin: 10px;
+
+        }
+
+        .item img {
+            width: 100%;
+            vertical-align: top;
+
+        }
+
+        .item .text {
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            padding: 10px 5px;
+            opacity: .6;
+        }
+
+        .item .text:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -5px;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            border-radius: 40px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .item .text:hover:before {
+            filter: blur(100px);
+            opacity: 1;
+            animation: animate 8s linear infinite;
+        }
+    </style>
 </head>
 
 <body>
-    <a href="#">button</a>
+
+
+    <div class="box">
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/500/1000/?random=1">
+            </div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi doloribus perspiciatis inventore
+                    ducimus
+                    ipsa. Deleniti accusantium perferendis quia unde qui nostrum veniam, doloremque inventore labore,
+                    cumque
+                    voluptate tempora sapiente cupiditate.</p>
+                <a href="#">button</a>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/500/1000/?random=1">
+            </div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi doloribus perspiciatis inventore
+                    ducimus
+                    ipsa. Deleniti accusantium perferendis quia unde qui nostrum veniam, doloremque inventore labore,
+                    cumque
+                    voluptate tempora sapiente cupiditate.</p>
+                <a href="#">button</a>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/500/1000/?random=1">
+            </div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi doloribus perspiciatis inventore
+                    ducimus
+                    ipsa. Deleniti accusantium perferendis quia unde qui nostrum veniam, doloremque inventore labore,
+                    cumque
+                    voluptate tempora sapiente cupiditate.</p>
+                <a href="#">button</a>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 
 </html>

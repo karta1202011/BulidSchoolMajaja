@@ -35,22 +35,19 @@
         }
 
         .text {
-            transition: bottom 1s;
+            /* transition: bottom 1s; */
             background: #000;
             color: #fff;
             padding: 10px 20px;
             opacity: .6;
             position: absolute;
             bottom: -300px;
-            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b);
         }
 
         .item .text {
-
             position: absolute;
             transition: .5s;
             transform: scale(0);
-            animation: animate 8s linear infinite;
         }
 
         .item:hover .text {
@@ -63,26 +60,42 @@
 
         }
 
-        a:hover:before {
-            filter: blur(40px);
+        .item .text:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -5px;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            border-radius: 40px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .item .text:hover:before {
+            filter: blur(100px);
             opacity: 1;
             animation: animate 8s linear infinite;
         }
-            @keyframes animate {
-                0% {
-                    background-position: 0%;
-                }
 
-                50% {
-                    background-position: 100%;
-                }
+        @keyframes animate {
+            0% {
+                background-position: 0%;
+            }
 
-                100% {
-                    background-position: 0%;
+            50% {
+                background-position: 100%;
+            }
 
-                }
+            100% {
+                background-position: 0%;
 
             }
+
+        }
     </style>
 </head>
 
