@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css" href="rgb.css">
+        #T2B {
+            background: -webkit-linear-gradient(yellow, red);
+            background: -o-linear-gradient(yellow, red);
+            background: -moz-linear-gradient(yellow, red);
+            background: linear-gradient(yellow, red);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .flex {
+            width: 960px;
+            margin: auto;
+        }
+
+        .item {
+            display: flex;
+            margin: 10px;
+
+        }
+
+        .item img {
+            width: 50%;
+            height: 50%;
+
+        }
+
+        .item .text {
+            background-color: #ccc;
+            color: #000;
+            padding: 10px;
+        }
+
+        .flex .item:nth-child(even) .text {
+            order: 1;
+        }
+
+        .box {
+            background-color: #aaa;
+            height: 100px;
+            width: 100px;
+            font-size: 50px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .btn {
+
+            /* 按钮美化 */
+            width: 270px;
+            /* 宽度 */
+            height: 40px;
+            /* 高度 */
+            border-width: 0px;
+            /* 边框宽度 */
+            border-radius: 3px;
+            /* 边框半径 */
+            /* background: ; */
+            /* 背景颜色 */
+            cursor: pointer;
+            /* 鼠标移入按钮范围时出现手势 */
+            outline: none;
+            /* 不显示轮廓线 */
+            font-family: Microsoft YaHei;
+            /* 设置字体 */
+            color: white;
+            /* 字体颜色 */
+            font-size: 17px;
+            /* 字体大小 */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        box
+    </div>
+    <div class="flex">
+        <div class="item">
+            <div class="text">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consectetur, sint aliquid
+                    repudiandae dolorem nesciunt dolor officiis illo laboriosam eius maiores? Iste voluptate quibusdam
+                    laboriosam adipisci pariatur modi mollitia illo?
+                </p>
+                <a href="#">Button</a>
+            </div>
+            <img src="https://picsum.photos/500/400?random=1" alt="">
+        </div>
+        <div class="item">
+            <div class="text">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consectetur, sint aliquid
+                    repudiandae dolorem nesciunt dolor officiis illo laboriosam eius maiores? Iste voluptate quibusdam
+                    laboriosam adipisci pariatur modi mollitia illo?
+                </p>
+
+            </div>
+
+            <img src="https://picsum.photos/500/400?random=1" alt="">
+        </div>
+        <div class="item">
+            <div class="text">
+                <h1>title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consectetur, sint aliquid
+                    repudiandae dolorem nesciunt dolor officiis illo laboriosam eius maiores? Iste voluptate quibusdam
+                    laboriosam adipisci pariatur modi mollitia illo?
+                </p>
+            </div>
+            <img src="https://picsum.photos/500/400?random=1" alt="">
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

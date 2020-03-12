@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="rgb.css">
+    <style type="text/css">
+        .box {
+            display: flex;
+            /* background: #ccc; */
+        }
+
+        .item {
+            position: relative;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .item img {
+            width: 100%;
+            vertical-align: top;
+            filter: grayscale(1);
+            transition: 1s;
+        }
+
+        .label {
+            background: #c33;
+            color: #fff;
+            padding: 5px 10px;
+            position: absolute;
+            left: -5px;
+            top: -10px;
+        }
+
+        .text {
+            transition: bottom 1s;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            opacity: .6;
+            position: absolute;
+            bottom: -300px;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b);
+        }
+
+        .item .text {
+
+            position: absolute;
+            transition: .5s;
+            transform: scale(0);
+            animation: animate 8s linear infinite;
+        }
+
+        .item:hover .text {
+            transform: scale(1);
+            bottom: -0;
+        }
+
+        .item:hover img {
+            filter: grayscale(0);
+
+        }
+
+        a:hover:before {
+            filter: blur(40px);
+            opacity: 1;
+            animation: animate 8s linear infinite;
+        }
+            @keyframes animate {
+                0% {
+                    background-position: 0%;
+                }
+
+                50% {
+                    background-position: 100%;
+                }
+
+                100% {
+                    background-position: 0%;
+
+                }
+
+            }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+        <div class="item">
+            <div class="label">紅框框</div>
+            <div class="pic">
+                <img src="https://picsum.photos/500/1000/?random=1">
+            </div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi doloribus perspiciatis inventore
+                    ducimus
+                    ipsa. Deleniti accusantium perferendis quia unde qui nostrum veniam, doloremque inventore labore,
+                    cumque
+                    voluptate tempora sapiente cupiditate.</p>
+                <a href="#">button</a>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="label">紅框框</div>
+            <div class="pic">
+                <img src="https://picsum.photos/500/1000/?random=1">
+            </div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi doloribus perspiciatis inventore
+                    ducimus
+                    ipsa. Deleniti accusantium perferendis quia unde qui nostrum veniam, doloremque inventore labore,
+                    cumque
+                    voluptate tempora sapiente cupiditate.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="label">紅框框</div>
+            <div class="pic">
+                <img src="https://picsum.photos/500/1000/?random=1">
+            </div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi doloribus perspiciatis inventore
+                    ducimus
+                    ipsa. Deleniti accusantium perferendis quia unde qui nostrum veniam, doloremque inventore labore,
+                    cumque
+                    voluptate tempora sapiente cupiditate.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
