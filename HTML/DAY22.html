@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            vertical-align: bottom;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .title {
+            margin: 0 0px 20px;
+            padding: 30px 10px;
+            background-color: #ccc;
+        }
+
+        .title h2 {
+            text-align: center;
+            font-size: 46px;
+        }
+
+        .title p {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .item {
+            margin: 0 10px 40px;
+        }
+
+        .item .text {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .item .pic img {
+            width: 100%;
+        }
+
+        .service {
+            padding: 60px 0;
+            background-color: #ffa;
+        }
+
+        #menu_control {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .header {
+            height: 50px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .logo {
+            width: 60px;
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .logo img {
+            vertical-align: middle;
+        }
+
+        .menu_btn {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+
+        .menu_btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa,
+                0px -8px 0px #aaa;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #fa0;
+            padding: 10px 20px;
+            border-bottom: 1px solid #a6e22c;
+        }
+
+        #menu_control:checked~.header nav {
+            left: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            nav {
+                width: 80%;
+                height: calc(100vh-50px);
+                background-color: #282923;
+                position: absolute;
+                top: 50px;
+                left: -100%;
+                transition: .5s;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .item-group {
+                display: flex;
+            }
+
+            .service .item {
+                display: flex;
+            }
+
+
+
+            .service .item .text {
+                width: 50%;
+                margin: 0;
+            }
+
+            .service .item .text {
+                display: flex;
+                padding: 0 20px;
+                box-sizing: border-box;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .menu_btn {
+                display: none;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                background-color: #282923;
+                align-items: center;
+            }
+
+            .logo {
+                width: 60px;
+                height: 40px;
+                margin: left 10px;
+            }
+
+            .logo a {
+                display: block;
+                height: 40px;
+            }
+
+            .logo img {
+                display: block;
+            }
+
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+
+            nav a {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/id/177/60/40" alt=""></a>
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <img src="https://picsum.photos/1400/500?random=1" alt="">
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores aliquam maiores
+                    harum omnis, suscipit eum accusantium et nisi nostrum distinctio doloribus ea id
+                    cupiditate ex, quod quasi officiis cum quam!</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/1/300/200" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/1/300/200" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/1/300/200" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/1/300/200" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/17/600/400" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores aliquam maiores
+                    harum omnis, suscipit eum accusantium et nisi nostrum distinctio doloribus ea id
+                    cupiditate ex, quod quasi officiis cum quam!</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/1/300/200" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/1/300/200" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/1/300/200" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/1/300/200" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>總統英文轉變實現介紹資料庫回去本論壇雙手，顯卡阿宅人民共和國性質開發商群眾補充，命運只能請教暴力網頁班推坑大魔王上次，意義禁止需要深深供應言論同事十二讓我們一點高中，徹底疾病一個月裝修蘋果經濟，很多人即將整個發言她說型號忍不住用戶期間她說傳輸兄弟，數碼相。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        &copy; copyright 2018 by csscoke
+    </div>
+
+
+
+</body>
+
+</html>
