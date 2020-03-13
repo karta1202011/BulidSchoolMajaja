@@ -171,6 +171,7 @@ h3::after{
    right: 290px;
    bottom: 180px;
    cursor: pointer;
+   border-bottom: 2px solid red;
 }
 
 
