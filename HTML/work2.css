@@ -5,7 +5,7 @@
 }
 body{
     text-align: center;
-     
+     position: relative;
 }
 .btn{
     margin: 40px;
@@ -23,7 +23,7 @@ body{
     position: relative;
     transition: all 0.3s;
 }
-button:before{
+.btn button:before{
     content: '';
     position: absolute;
     top: 0;
@@ -36,7 +36,7 @@ button:before{
     transition:  .5s;
     transform: translate(0,105%);
     }
-button:hover:before{
+.btn button:hover:before{
     opacity: 1;
     transform: translateY(0);  
     }
@@ -153,11 +153,32 @@ h3::after{
     opacity: 0;
 
 }
+.video{
+    position: relative;
+    /* background: #fa0; */
+    
+}
+.video video{
+    width: 100%;
+    -webkit-mask-image: url(toyota/asset75.png);
+    mask: url(toyota//things.svg);
+    -webkit-mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    
+}
+.video .rl{
+   position: absolute;
+   right: 290px;
+   bottom: 180px;
+   cursor: pointer;
+}
+
+
 
 .slider a:hover:after {
     border-bottom: 3px solid red;
 }
 
-img {
+.center img {
     padding: 50px;
 }
