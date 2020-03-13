@@ -1,12 +1,12 @@
 body{
     margin: 0;
     padding: 0;
-    background: #000;
+    list-style: none;
 }
 a{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 5px;
+    left: 0; 
     width: 100px;
     height: 50px;
     text-align: center;

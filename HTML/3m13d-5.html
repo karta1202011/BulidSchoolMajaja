@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .sample,.sample2 {
+            margin: 100px;
+            width: 40px;
+            height: 40px;
+            background: #fa0;
+            position: relative;
+        }
+
+        .sample::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -10px;
+            border-top: 10px solid #fa0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+        }
+        .sample2::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -10px;
+            border-bottom: 10px solid transparent;
+            border-left: 20px solid #fa0;
+            border-right: 20px solid #fa0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="sample"></div>
+    <div class="sample2"></div>
+</body>
+
+</html>
