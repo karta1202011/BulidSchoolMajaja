@@ -49,14 +49,17 @@ h3::after{
     border-bottom: 3px solid #000;
 }
 
-.center{
+.center1{
     /* background: #fa0; */
     width: 960px;
     height: 788px;
     margin: 88px auto;
     position: relative;
 }
-.mid{
+.center1 img {
+    padding: 50px;
+}
+.center1 .mid{
     /* background: #fa0;  */
     width: 600px;
     height: 500px;
@@ -69,27 +72,7 @@ h3::after{
     transition: All 1s;
     opacity: 0;
 }
-.center:hover .mid {
-    opacity: 1;
-    transform: translate(-10%,0);
-}
-.center:hover .icon {
-    opacity: 1;
-    transform: translate(-10%,0);
-}
-.center:hover .ccc{
-    opacity: 1;
-    transform: translate(-10%,0);
-}
-.center:hover .lb{
-    opacity: 1;
-    transform: translate(10%,0);
-}
-.center:hover .lt{
-    opacity: 1;
-    transform: translate(10%,0);
-}
-.lt{
+.center1 .lt{
 
     margin: auto;
     position: absolute;
@@ -98,18 +81,18 @@ h3::after{
     transition: 1s;
     opacity: 0;
 }
-.lb{
+.center1 .lb{
     /* background: #fa0; */
     width: 700px;
     height: 250px;
     position: absolute;
-    bottom: 0;
+    bottom: -30px;
     left: -50px;
     transition: 1s;
     opacity: 0;
 
 }
-.icon{
+.center1 .icon{
     margin: auto;
     position: absolute;
     top: 350px;
@@ -117,6 +100,386 @@ h3::after{
     transition: 1s;
     opacity: 0;
 
+}
+.center1 .ccc{
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    right: -30px;
+    top: 90px;
+    background: #ddd;
+    opacity: .4;
+    z-index: -1;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center1:hover .mid {
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center1:hover .icon {
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center1:hover .ccc{
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center1:hover .lb{
+    opacity: 1;
+    transform: translate(0,-10%);
+}
+.center1:hover .lt{
+    opacity: 1;
+    transform: translate(10%,0);
+}
+.center2{
+    /* background: #fa0; */
+    width: 960px;
+    height: 788px;
+    margin: 88px auto;
+    position: relative;
+}
+.center2 img {
+    padding: 50px;
+}
+.center2 .mid{
+    /* background: #fa0;  */
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    bottom: 0;
+    transition: All 1s;
+    opacity: 0;
+}
+.center2 .lt{
+    margin: auto;
+    position: absolute;
+    top: 7px;
+    right:  -130px;
+    transition: 1s;
+    opacity: 0;
+}
+.center2 .lb{
+    /* background: #fa0; */
+    width: 700px;
+    height: 250px;
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center2 .icon{
+    margin: auto;
+    position: absolute;
+    top: 350px;
+    left: -20px;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center2 .ccc{
+    width: 520px;
+    height: 400px;
+    position: absolute;
+    left: 30%;
+    top: 70px;
+    background: #ddd;
+    opacity: .4;
+    z-index: -1;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center2:hover .mid {
+    opacity: 1;
+    transform: translate(10%,0);
+    
+}
+.center2:hover .icon {
+    opacity: 1;
+    transform: translate(10%,0);
+    
+}
+.center2:hover .ccc{
+    opacity: 1;
+    transform: translate(0,10%);
+    
+}
+.center2:hover .lb{
+    opacity: 1;
+    transform: translate(0,-10%);
+    
+}
+.center2:hover .lt{
+    opacity: 1;
+    transform: translate(-10%,0);
+    
+}
+
+.center3{
+    /* background: #fa0; */
+    width: 960px;
+    height: 788px;
+    margin: 88px auto;
+    position: relative;
+}
+.center3 img {
+    padding: 50px;
+}
+.center3 .mid{
+    /* background: #fa0;  */
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: All 1s;
+    opacity: 0;
+}
+.center3 .lt{
+
+    margin: auto;
+    position: absolute;
+    top: 7px;
+    left: -100px;
+    transition: 1s;
+    opacity: 0;
+}
+.center3 .lb{
+    /* background: #fa0; */
+    width: 700px;
+    height: 250px;
+    position: absolute;
+    bottom: -30px;
+    left: -50px;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center3 .icon{
+    margin: auto;
+    position: absolute;
+    top: 350px;
+    right: -20px;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center3 .ccc{
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    right: -30px;
+    top: 90px;
+    background: #ddd;
+    opacity: .4;
+    z-index: -1;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center3:hover .mid {
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center3:hover .icon {
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center3:hover .ccc{
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center3:hover .lb{
+    opacity: 1;
+    transform: translate(0,-10%);
+}
+.center3:hover .lt{
+    opacity: 1;
+    transform: translate(10%,0);
+}
+.center4{
+    /* background: #fa0; */
+    width: 960px;
+    height: 788px;
+    margin: 88px auto;
+    position: relative;
+}
+.center4 img {
+    padding: 50px;
+}
+.center4 .mid{
+    /* background: #fa0;  */
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    bottom: 0;
+    transition: All 1s;
+    opacity: 0;
+}
+.center4 .lt{
+    margin: auto;
+    position: absolute;
+    top: 7px;
+    right:  -130px;
+    transition: 1s;
+    opacity: 0;
+}
+.center4 .lb{
+    /* background: #fa0; */
+    width: 700px;
+    height: 250px;
+    position: absolute;
+    bottom: -25px;
+    right: 0px;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center4 .icon{
+    margin: auto;
+    position: absolute;
+    top: 350px;
+    left: -20px;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center4 .ccc{
+    width: 520px;
+    height: 400px;
+    position: absolute;
+    left: 30%;
+    top: 70px;
+    background: #ddd;
+    opacity: .4;
+    z-index: -1;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center4:hover .mid {
+    opacity: 1;
+    transform: translate(10%,0);
+    
+}
+.center4:hover .icon {
+    opacity: 1;
+    transform: translate(10%,0);
+    
+}
+.center4:hover .ccc{
+    opacity: 1;
+    transform: translate(0,10%);
+    
+}
+.center4:hover .lb{
+    opacity: 1;
+    transform: translate(0,-10%);
+    
+}
+.center4:hover .lt{
+    opacity: 1;
+    transform: translate(-10%,0);
+    
+}
+.center5{
+    /* background: #fa0; */
+    width: 960px;
+    height: 788px;
+    margin: 88px auto;
+    position: relative;
+}
+.center5 img {
+    padding: 50px;
+}
+.center5 .mid{
+    /* background: #fa0;  */
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: All 1s;
+    opacity: 0;
+}
+.center5 .lt{
+
+    margin: auto;
+    position: absolute;
+    top: 7px;
+    left: -100px;
+    transition: 1s;
+    opacity: 0;
+}
+.center5 .lb{
+    /* background: #fa0; */
+    width: 700px;
+    height: 250px;
+    position: absolute;
+    bottom: -30px;
+    left: -50px;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center5 .icon{
+    margin: auto;
+    position: absolute;
+    top: 350px;
+    right: -20px;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center5 .ccc{
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    right: -30px;
+    top: 90px;
+    background: #ddd;
+    opacity: .4;
+    z-index: -1;
+    transition: 1s;
+    opacity: 0;
+
+}
+.center5:hover .mid {
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center5:hover .icon {
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center5:hover .ccc{
+    opacity: 1;
+    transform: translate(-10%,0);
+}
+.center5:hover .lb{
+    opacity: 1;
+    transform: translate(0,-10%);
+}
+.center5:hover .lt{
+    opacity: 1;
+    transform: translate(10%,0);
 }
 .slider {
     background-color: #000;
@@ -140,19 +503,7 @@ h3::after{
     line-height: 20px;
     border-bottom: 3px solid transparent;
 }
-.ccc{
-    width: 450px;
-    height: 300px;
-    position: absolute;
-    right: -30px;
-    top: 90px;
-    background: #ddd;
-    opacity: .4;
-    z-index: -1;
-    transition: 1s;
-    opacity: 0;
 
-}
 .video{
     position: relative;
     /* background: #fa0; */
@@ -180,6 +531,3 @@ h3::after{
     border-bottom: 3px solid red;
 }
 
-.center img {
-    padding: 50px;
-}
