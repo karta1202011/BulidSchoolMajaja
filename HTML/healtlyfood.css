@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+     position: relative;
+    /* margin: 0 275px; */
+
+}
+.main-menu{
+    position: relative;
+    position: sticky;
+    padding:  33px 85px;
+    background: #fff;
+    border-bottom:1px solid #eee;
+    display: flex;
+    opacity: .6;
+}
+.main-menu img{
+    width: 20px;
+    height: 20px;
+}
+.main-menu .user{
+    /* background-color: #fa0; */
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    cursor: pointer;
+    
+}
+.main-menu .user span{
+    display: block;
+    margin: 0 10px;
+    font-family: sans-serif;
+}
+.main-menu .selection{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    margin: 0 20px;
+    /* background: #fa0; */
+    
+}
+.main-menu .selection img{
+    width: 20px;
+    height: 100%;
+    margin: 5px 0 0 0;
+    padding: 0 5px;
+}
+.main-menu .selection a{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.main-menu span a{
+    font-size: 19px;
+}
+.top-menu {
+    position: relative;
+    padding:  70px 90px;
+    background-color: #fff;
+    font-size: 0;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    opacity: .6;
+}
+
+.top-menu .title span {
+    display: block;
+    font-size: 19px;
+    line-height: 1.2em;
+    font-family: sans-serif;
+    letter-spacing: 0.22em;
+    margin-top: 10px;
+    font-weight:lighter;
+}
+.top-menu .arrow{
+    padding: 0 30px;
+    /* background: #fa0; */
+    display: flex;
+    position: absolute;
+    right: 20px;
+    
+}
+.top-menu .arrow a{
+    margin: 10px;
+    padding: 10px 0;
+    color: #000;
+    display: block;
+    font-size: 16px;
+    line-height: 1.2em;
+    font-family: sans-serif;
+    font-weight:lighter;
+    font-weight: 600;
+    opacity: .8;
+    transition: .6s;
+    border-bottom: 3px solid transparent;
+    /* background: #fa0; */
+}
+
+.Introduction{
+    display: flex;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.Introduction .product-pic
+{
+    width: 60%;
+    height: 500px;
+}
+.Introduction .product-text{
+    margin: 60px 0;
+    width: 40%;
+    height: auto;
+    position: relative;
+}
+.Introduction .product-pic img{
+    width: 100%;
+    height: 100%;
+}
+.Introduction h2{
+    font-size: 70px;
+    margin: 0 50px;
+    font-family: sans-serif;
+    font-weight: 1;
+    margin-bottom: 20px;
+    
+}
+.Introduction h3{
+    font-size: 50px;
+    margin: 0 50px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #fd0;
+}
+.Introduction button{
+    position: absolute;
+    bottom: -60px;
+    left: 50px;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    background: #000;
+    border-radius: 5px;
+    border: 1px solid#000;
+    color: #fff;
+    
+    transition: .6s;
+}
+.Introduction button:hover{
+    background: #fd0;
+    color:#000;
+    
+}
+.linear {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(#eee,#fff);
+    margin: 20px 0;
+}
+.type-area{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    
+}
+.type-area button{
+    margin: 0 20px;
+    width: 200px;
+    height: 160px;
+    border: none;
+    background: #000;
+    position: relative;
+    box-shadow: none;
+    transition: .6s;
+
+}
+.type-area button img{
+    width: 100%;
+    height: 100%;
+}
+.type-area button h3{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+}
+.type-area button:hover{
+    box-shadow: 0 0 10px 10px #eee;
+    color:#fd0
+}
+.daily{
+    /* background: #000; */
+    width: 98%;
+    height: 100%;
+    margin: 20px;
+    display: flex;
+    text-align: center;
+}
+.daily .daily-left{
+    background: #000;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    margin: 0 30px;
+    position: relative;
+}
+.daily .daily-left img{
+    width: 100%;
+    height: 100%;
+}
+.daily .daily-left h2{
+    font-size: 36px;
+    color: #fff;
+    font-family: bold,sans-serif;
+    position: absolute;
+    left: 10px;
+    right: 150px;
+    bottom: 20%;
+}
+.daily .daily-left a{
+    font-size: 20px;
+    color: #fff;
+    font-family: bold,sans-serif;
+    position: absolute;
+    left: 30px;
+    bottom: 100px;
+    text-decoration: underline;
+}
+.daily .daily-right{
+    width: 50%;
+    height: 100%;
+    margin: 0 30px 0 0;
+    position: relative;
+    
+}
+.daily .daily-right img{
+    width: 100%;
+}
+.daily .daily-right .drt{
+    text-align: left;
+    position: relative;
+    margin: 0 0 25px 0;
+}
+.daily .daily-right .drt h2{
+    font-size: 36px;
+    color: #fff;
+    font-family: bold,sans-serif;
+    position: absolute;
+    left: 25px;
+    bottom: 80px;
+}
+.daily .daily-right .drt a{
+    font-size: 20px;
+    color: #fff;
+    font-family: bold,sans-serif;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    text-decoration: underline;
+}
+.daily .daily-right .drb{
+    position: relative;
+}
+.daily .daily-right .drb h2{
+    font-size: 36px;
+    color: #fff;
+    font-family: bold,sans-serif;
+    position: absolute;
+    left: 20px;
+    top: 120px;
+}
+.daily .daily-right .drb p{
+    font-weight: 400;
+    color: #fff;
+    font-size: 15px;
+    font-family: bold,sans-serif;
+    text-transform: initial;
+    position: absolute;
+    left: 20px;
+    top: 180px;
+}
+.daily .daily-right .drb a{
+    font-size: 20px;
+    color: #fff;
+    font-family: bold,sans-serif;
+    position: absolute;
+    left: 20px;
+    bottom: 100px;
+    text-decoration: underline;
+}
+.fp{
+    width: 100%;
+    height: 100%;
+    margin: 100px 0px;
+    position: relative;
+    
+}
+.fpt{
+    display: flex;
+    font-size: 24px;
+    margin: 50px 60px;
+}
+.fpb{
+    display: flex;
+    justify-content: center;
+}
+.fpt h3{
+    margin: 0 auto;
+}
+.fpt button{
+    width: 30px;
+    height: 30px;
+}
+
+.fpb .container button{
+    margin: 0 5px;
+    border: none;
+    background-color: #eee;
+}
+.fpb .container button img{
+    position: absolute;
+    
+}
+.fpb .container h3{
+    margin: 5px;
+    font-size: 14px;
+    font-family: bold,sans-serif;
+    color: #333;
+}
+.fpb .container p{
+    margin: 5px;
+    font-size: 20px;
+    font-family: bold,sans-serif;
+    color: #333;
+}
+.fpb .container p span{
+    margin: 0 10px 0 0;
+    text-decoration: line-through;
+}
+
+
+.fpb .container .bl{
+    display: flex;
+}
+.fpb .container .bl button{
+    padding: 5px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #000;
+    position: relative;
+    transition: .6s;
+}
+.fpb .container .bl button:hover{
+    background: #fd0;
+    border: 1px solid transparent;
+}
+.fpb .container .bl .cart{
+    display: flex;
+}
+.fpb .container .bl .cart:hover{
+    
+}
+.fpb .container .bl .cart p{
+    font-size: 12px;
+}
+.fpb .container .bl img{
+    width: 20px;
+    height: 20px;
+
+}
+.arrow .bt1{
+    position: relative;
+}
+.arrow .bt1 a::before{
+    border-bottom: 3px solid transparent;
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.4s;
+    transform: scale(0, 1);
+}
+.bt2{
+    position: relative;
+}
+.arrow .bt2 a::before{
+    border-bottom: 3px solid transparent;
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.4s;
+    transform: scale(0, 1);
+}
+.bt3{
+    position: relative;
+}
+.arrow .bt3 a::before{
+    border-bottom: 3px solid transparent;
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.4s;
+    transform: scale(0, 1);
+}
+.bt4{
+    position: relative;
+}
+.arrow .bt4 a::before{
+    border-bottom: 3px solid transparent;
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.4s;
+    transform: scale(0, 1);
+}
+.bt5{
+    position: relative;
+}
+.arrow .bt5 a::before{
+    border-bottom: 3px solid transparent;
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.6s;
+    transform: scale(0, 1);
+}
+.bt6{
+    position: relative;
+}
+.arrow .bt6 a::before{
+    border-bottom: 3px solid transparent;
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.4s;
+    transform: scale(0, 1);
+}
+.top-menu .arrow a:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+    border-bottom: 3px solid #000;
+}
+.footer {
+    background-color: #ffe605;
+    color: #222;
+    text-align: center;
+    padding: 15px ;
+    line-height: 21px;
+    font-size: 14px;
+    font-family:sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
