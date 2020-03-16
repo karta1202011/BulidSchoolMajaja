@@ -70,7 +70,7 @@ body{
     top: 0;
     z-index: 5;
     display: flex;
-    opacity: .6;
+    
 }
 
 .top-menu .title span {
@@ -168,6 +168,7 @@ body{
     margin: 20px 0;
 }
 .type-area{
+    justify-content: center;
     width: 100%;
     height: 200px;
     display: flex;
@@ -301,7 +302,7 @@ body{
 .fp{
     width: 100%;
     height: 100%;
-    margin: 100px 0px;
+    margin-top: 100px;
     position: relative;
     
 }
@@ -320,16 +321,31 @@ body{
 .fpt button{
     width: 30px;
     height: 30px;
+    border: 2px solid #eee;
+    background: #fff;
+    margin: 0 5px;
 }
 
 .fpb .container button{
     margin: 0 5px;
     border: none;
     background-color: #eee;
+    position: relative;
 }
 .fpb .container button img{
+    transition: .6s;
+}
+.fpb .container button img:nth-child(1):hover{
+    opacity: 0;
+}
+.fpb .container button img:nth-child(2){
     position: absolute;
-    
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.fpb .container button img:nth-child(2):hover{
+    opacity: 1;
 }
 .fpb .container h3{
     margin: 5px;
@@ -366,18 +382,360 @@ body{
 }
 .fpb .container .bl .cart{
     display: flex;
+    line-height: 2px;
+    padding: 7px 20px;
 }
 .fpb .container .bl .cart:hover{
     
 }
 .fpb .container .bl .cart p{
     font-size: 12px;
-}
-.fpb .container .bl img{
-    width: 20px;
-    height: 20px;
 
 }
+
+
+
+.Discount{
+    display: flex;
+    padding: 100px 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    /* background: #000; */
+}
+
+
+.Discount .float-Discount{
+    text-align: center;
+    background: #fff;
+    position: relative;
+    left: -260px;
+    display: inline-block;
+    width: 55%;
+    height: 450px;
+    z-index: 1;
+    box-shadow: 0px 15px 33px 5px rgba(0,0,0,0.1);
+}
+.Discount .float-Discount h2{
+    
+    font-size: 80px;
+    padding: 30px;
+    margin-top: 15%;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    
+}
+.Discount .float-Discount h3{
+    position: absolute;
+    bottom:  35%;
+    left: 0;
+    right: 0;
+    font-size: 80px;
+    font-family: sans-serif;
+    font-weight: 1;
+    color: #222;
+}
+.Discount .float-Discount button{
+    margin-top: 60px;
+    height: 40px;
+    width: 135px;
+    font-size: 12px;
+    line-height: 40px;
+    font-family: sans-serif;
+    background: #fd0;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+    transition: .6s;
+}
+.Discount .Discount-pic
+{
+    padding: 50px;
+    width: 70%;;
+    height: 480px;
+    position: absolute;
+    top: 15%;
+    right: 5px;
+}
+.Discount .Discount-pic img
+{
+    width: 100%;
+    height: 100%;
+}
+.Discount .float-Discount button:hover{
+    background: #000;
+    color:#fff;
+    
+}
+
+.Os{
+    width: 98%;
+    height: 950px;
+    margin: 50px 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.Os .Osl{
+    background: #000;
+    width: 45%;
+    height: auto;
+    background: #fff;
+    margin: 0 30px;
+    position: relative;
+}
+.Osl img{
+    width: 100%;
+    height: 100%;
+}
+.Os .Osl h2{
+    font-size: 36px;
+    color: #fff;
+    font-family: bold,sans-serif;
+    position: absolute;
+    left: 30px;
+    bottom: 15%;
+}
+.Os .Osl a{
+    font-size: 20px;
+    color: #fff;
+    font-family: bold,sans-serif;
+    font-weight: 700;
+    position: absolute;
+    left: 30px;
+    bottom: 100px;
+    text-decoration: underline;
+}
+.Os .Ors .Osrt h3{
+}
+.Os .Osr {
+    width: 42%;
+    height: auto;
+}
+.Os .Osr .Osrbt {
+    margin: 10px 0 120px 0;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.Os .Osr .Osrbt h3{
+    font-size: 28px;
+    font-family: bold,sans-serif;
+    font-weight: 600;
+}
+
+.Os .Osr .Osrbt .container button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #eee;
+    position: relative;
+}
+.Os .Osr .Osrbt .container .bl button{
+    width: 30px;
+    height: 30px;
+    border: 2px solid #eee;
+    background: #fff;
+    margin: 0 5px;
+}
+.Os .Osr .Osrbt .container button img{
+    transition: .6s;
+}
+.Os .Osr .Osrbt .container button img:nth-child(2){
+    position: absolute;
+    top: 43px;
+    left: 5px;
+    opacity: 0;
+}
+
+.Os .Osr .Osrbt .container h3{
+    margin: 5px;
+    font-size: 14px;
+    font-family: bold,sans-serif;
+    color: #333;
+}
+.Os .Osr .Osrbt .container p{
+    margin: 5px;
+    font-size: 20px;
+    font-family: bold,sans-serif;
+    color: #333;
+}
+.Os .Osr .Osrbt .container p span{
+    margin: 0 10px 0 0;
+    text-decoration: line-through;
+}
+
+
+.Os .Osr .Osrbt .container .bl{
+    display: flex;
+}
+.Os .Osr .Osrbt .container .bl button{
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #000;
+    position: relative;
+    transition: .6s;
+}
+
+.Os .Osr .Osrbt .container .bl .cart{
+    width: auto;
+    display: flex;
+    line-height: 2px;
+    padding: 7px 7px;
+    
+}
+
+.Os .Osr .Osrbt .container .bl .cart p{
+    font-size: 12px;
+
+}
+
+.Os .Osr .Osrbt .container button:hover img:nth-child(1){
+    opacity: 0;
+}
+
+.Os .Osr .Osrbt .container button:hover img:nth-child(2){
+    opacity: 1;
+}
+.Os .Osr .Osrbt .container .bl button:hover{
+    background: #fd0;
+    border: 1px solid transparent;
+}
+.Os .Osr .Osrbt .container .bl .cart:hover{
+    
+}
+
+.FePo{
+    width: 100%;
+    /* background: #000; */
+    font-family: bold,sans-serif;
+    text-align: center;
+}
+.FePo h2{
+    font-size: 22px; 
+    margin-bottom: 30px;
+
+}
+.FePo .Post{
+
+    justify-content: center;
+    /* background: #000; */
+    display: flex;
+    line-height: 30px;
+    width: 100%;
+}
+.FePo .Post .PoCo {
+    width: 100%;
+    justify-content: center;
+    margin: 40px;
+    position: relative;
+
+}
+.FePo .Post .PoCo .text a{
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    transition: .4s;
+
+}
+.FePo .Post .PoCo .text h3{
+    font-weight: 300;
+}
+.FePo .Post .PoCo .text{
+    text-align: left;
+    font-size: 14px;
+    cursor: default;
+}
+.FePo .Post .PoCo img{
+    width: 100%;
+    height: 60%;
+}
+.FePo .Post .PoCo span{
+    top: -20px;
+    right: -20px;
+    z-index: -1;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    box-shadow: 0 0 5px 5px #eee;
+    opacity: .4;
+    
+}
+.FePo .Post .PoCo .text a:hover{
+    color: #fe0;
+}
+
+.Information{
+    width: 100%;
+    height: 450px;
+    background: #f3f3f37c;
+    display: flex;
+    font-family: sans-serif;
+    text-align: left;
+    justify-content: center;
+}
+.Information .Ifmt{
+    /* background: #000; */
+    width: auto;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px;
+}
+.Information h3{
+    margin: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: #000;
+}
+.Information a{
+    font-size: 14px;
+    display: block;
+    margin: 20px 0;
+    color: #000;
+    transition: .2s;
+}
+.Information a:hover{
+    color: #fd0;
+}
+.Information p{
+    margin: 20px 0;
+}
+.Information .email{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+.Information .email input{
+    background: transparent;
+    border: none;
+    height: 30px;
+}
+.Information .email button{
+    width: 30px;
+    height: auto;
+    background-color: #fff;
+    transition: .6s;
+    border: 3px transparent;
+}
+
+.Information .email button:hover{
+    color: #fff;
+    background-color: #000;
+    border: 13px #fd0;
+
+    
+}
+
+
+
+
 .arrow .bt1{
     position: relative;
 }
@@ -484,6 +842,6 @@ body{
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -50px;
     
 }
