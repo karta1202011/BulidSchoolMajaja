@@ -505,7 +505,9 @@ h3::after{
 
 .video{
     position: relative;
-    background: #fa0;
+    top: 0;
+    left: 0;
+    /* background: #fa0; */
     
 }
 .video video{
