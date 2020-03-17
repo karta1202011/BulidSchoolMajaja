@@ -49,6 +49,14 @@ body{
     /* background: #fa0; */
     
 }
+.main-menu .selection i{
+transition: .6s;
+}
+    .main-menu .selection a{
+        transition: .6s;
+
+    }
+
 .main-menu .selection i:hover{
     color:#fe0
 }
