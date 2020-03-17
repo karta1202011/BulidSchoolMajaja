@@ -29,7 +29,10 @@ body{
     z-index: 5;
     display: flex;
     cursor: pointer;
-    
+    transition: .6s;
+}
+.main-menu .user:hover{
+    color: #fe0;
 }
 .main-menu .user span{
     display: block;
@@ -42,14 +45,12 @@ body{
     right: 0;
     padding: 20px 20px;
     margin: 0 20px;
+    transform: .6s;
     /* background: #fa0; */
     
 }
-.main-menu .selection img{
-    width: 20px;
-    height: 100%;
-    margin: 5px 0 0 0;
-    padding: 0 5px;
+.main-menu .selection:hover{
+    color:#fe0
 }
 .main-menu .selection a{
     display: inline-block;
