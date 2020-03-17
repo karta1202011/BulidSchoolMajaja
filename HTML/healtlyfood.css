@@ -45,12 +45,16 @@ body{
     right: 0;
     padding: 20px 20px;
     margin: 0 20px;
-    transform: .6s;
+    transition: .6s;
     /* background: #fa0; */
     
 }
-.main-menu .selection:hover{
+.main-menu .selection i:hover{
     color:#fe0
+}
+.main-menu .selection a:hover{
+    color:#fe0
+
 }
 .main-menu .selection a{
     display: inline-block;
