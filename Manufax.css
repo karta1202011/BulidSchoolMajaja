@@ -15,13 +15,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 20px 0;
 }
 
 .Information .Position {
-  width: 33%;
+  width: 31.38020833333333%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +45,7 @@
 }
 
 .Information .Phone {
+  width: 31.38020833333333%;
   width: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +67,7 @@
 }
 
 .Information .Social {
-  width: 33%;
+  width: 31.38020833333333%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,14 +94,29 @@
 }
 
 .elementor-container .wrap {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.elementor-container .wrap input {
+  position: absolute;
+  left: -30px;
+}
+
+.elementor-container .wrap .logo {
   padding: 20px 10px;
+  width: 25%;
 }
 
 .elementor-container .wrap .menu {
+  padding: 20px 10px;
   margin: auto;
+  width: 64%;
+  padding: 0 20px;
 }
 
 .elementor-container .wrap .menu a {
@@ -110,16 +129,33 @@
   letter-spacing: 0.7px;
 }
 
-.elementor-container .wrap .search {
+.elementor-container .wrap .useing {
+  width: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.elementor-container .wrap .useing .search {
+  width: 100%;
   margin: auto;
 }
 
-.elementor-container .wrap .search i {
+.elementor-container .wrap .useing .search i {
+  color: #fff;
+}
+
+.elementor-container .wrap .useing .list {
+  display: none;
+}
+
+.elementor-container .wrap .useing .list i {
   color: #fff;
 }
 
 .jet-slider {
   position: relative;
+  width: 100%;
 }
 
 .jet-slider .slider-bg {
@@ -374,15 +410,21 @@
   height: auto;
 }
 
+.elementor-selection {
+  width: 100%;
+}
+
 .elementor-selection .selection {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .elementor-selection .selection .selection-content {
-  width: 25%;
+  width: 24.7%;
   height: 358px;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -415,6 +457,26 @@
 
 .elementor-populated {
   width: 100%;
+  text-align: center;
+}
+
+.elementor-populated .divider {
+  padding: 50px 0;
+}
+
+.elementor-populated .divider span {
+  display: inline-block;
+  width: 60px;
+  border: 1px solid #1ac4f4;
+}
+
+.elementor-populated .heading {
+  padding-bottom: 50px;
+}
+
+.elementor-populated .heading h2 {
+  font-size: 30px;
+  line-height: 14px;
 }
 
 .elementor-populated .post {
@@ -490,9 +552,11 @@
   background-color: #333;
   margin-top: 100px;
   padding: 130px 0 0 0;
+  width: 100%;
 }
 
 .footer .top-column {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,5 +736,231 @@
 
 .footer .elementor-row .Social .icon-list i {
   margin-right: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .Information .Position {
+    width: 47%;
+  }
+  .Information .Phone {
+    width: 47%;
+  }
+  .Information .Social {
+    width: 47%;
+  }
+  .elementor-container .wrap {
+    text-align: center;
+  }
+  .elementor-container .wrap .logo {
+    text-align: left;
+    width: 90%;
+  }
+  .elementor-container .wrap .menu {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    padding: 10px 40px;
+  }
+  .elementor-container .wrap .useing {
+    width: 4%;
+  }
+  .elementor-container .wrap .useing .search {
+    width: 100%;
+  }
+  .jet-slider .slider-bg {
+    height: 900px;
+  }
+  .jet-slider .slider-bg img {
+    height: 100%;
+  }
+  .jet-slider .jet-slider_content .jet-slider_title {
+    font-size: 80px;
+    line-height: 30px;
+    padding: 400px 0 0 0;
+  }
+  .elementor-Introduction .Introduction-row {
+    width: 100%;
+    padding: 30px 0;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .elementor-Introduction .Introduction-row .content-column {
+    padding: 0 20px;
+    width: 95%;
+  }
+  .elementor-Introduction .Introduction-row .content-pic {
+    width: 95%;
+  }
+  .elementor-selection .selection .selection-content {
+    width: 50%;
+  }
+  .elementor-populated .post {
+    padding: 0 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .elementor-populated .post .post-content {
+    width: 100%;
+    margin: 0;
+  }
+  .elementor-populated .post .post-content a img {
+    height: 100%;
+  }
+  .elementor-populated .post .post-content .inner {
+    margin-bottom: 50px;
+  }
+  .footer .top-column {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 30px 0;
+  }
+  .footer .top-column .column-content {
+    padding: 0 50px;
+    width: 36.6171875%;
+  }
+  .footer .top-column .column-content .logo {
+    height: 16%;
+    width: 80%;
+  }
+  .footer .elementor-row {
+    width: 100%;
+    padding: 15px 8px;
+    text-align: left;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  .footer .elementor-row .clear-fix {
+    width: 65%;
+  }
+  .footer .elementor-row .Social {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  input:checked.fuck ~ div.menu {
+    display: block;
+    width: 10%;
+    background: #000;
+    position: absolute;
+    top: 120px;
+  }
+  .Information .Position {
+    width: 100%;
+  }
+  .Information .Phone {
+    width: 100%;
+  }
+  .Information .Social {
+    width: 100%;
+  }
+  .elementor-container .wrap {
+    padding: 20px 0;
+  }
+  .elementor-container .wrap .logo {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+  .elementor-container .wrap .menu {
+    display: none;
+    width: 100%;
+  }
+  .elementor-container .wrap .menu a {
+    text-align: left;
+  }
+  .elementor-container .wrap .useing {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .elementor-container .wrap .useing .search {
+    text-align: right;
+    width: 48%;
+  }
+  .elementor-container .wrap .useing .list {
+    text-align: left;
+    display: block;
+    width: 48%;
+    margin: auto;
+  }
+  .elementor-container .wrap .useing .list i {
+    color: #fff;
+  }
+  .jet-slider .slider-bg {
+    height: 715px;
+  }
+  .jet-slider .slider-bg img {
+    height: 100%;
+  }
+  .jet-slider .jet-slider_content .jet-slider_title {
+    font-size: 30px;
+    line-height: 10px;
+    padding: 300px 0 0 0;
+  }
+  .jet-slider .jet-slider_content .jet-slider_subtitle {
+    padding: 0 5px;
+    font-size: 20px;
+  }
+  .elementor-element .elementor-inner .elementor-inner-column {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .elementor-selection .selection .selection-content {
+    width: 100%;
+  }
+  .footer .top-column {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 30px 0;
+  }
+  .footer .top-column .column-content {
+    padding: 20px 50px 30px 50px;
+    width: 100%;
+  }
+  .footer .top-column .column-content .logo {
+    height: 25%;
+    width: 30%;
+  }
+  .footer .elementor-row {
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .elementor-row .clear-fix {
+    width: 100%;
+  }
+  .footer .elementor-row .Social {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer .top-column {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 30px 0;
+  }
+  .footer .top-column .column-content {
+    padding: 20px;
+    width: 100%;
+  }
+  .footer .top-column .column-content .logo {
+    height: 25%;
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=Manufax.css.map */
