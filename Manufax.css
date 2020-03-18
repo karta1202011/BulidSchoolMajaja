@@ -122,9 +122,16 @@
   position: relative;
 }
 
+.jet-slider .slider-bg {
+  width: 100%;
+  height: 950px;
+}
+
 .jet-slider .slider-bg img {
   width: 100%;
-  height: 100%;
+  height: 950px;
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
 }
 
 .jet-slider .jet-slider_content {
@@ -144,8 +151,8 @@
   text-transform: uppercase;
   line-height: 146px;
   letter-spacing: 5.6px;
-  padding: 100px 0px 15px 0px;
-  margin: 0px 0px 0px 0px;
+  padding: 300px 0px 15px 0px;
+  margin: 20px 0;
 }
 
 .jet-slider .jet-slider_content .jet-slider_subtitle {
@@ -156,10 +163,11 @@
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 0.2px;
+  margin: 20px 0;
 }
 
 .jet-slider .jet-slider_content .jet-slider_button-wrapper {
-  margin-top: 50px;
+  margin-top: 100px;
   font-family: "Montserrat", Sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -180,6 +188,9 @@
 
 .elementor-element {
   margin-top: 100px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .elementor-element .divider {
@@ -209,20 +220,23 @@
 }
 
 .elementor-element .elementor-inner {
-  margin-top: 30px;
-  width: 100%;
+  text-align: left;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .elementor-element .elementor-inner .elementor-inner-column {
-  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 33%;
   min-height: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
 }
 
 .elementor-element .elementor-inner .elementor-inner-column .icon {
@@ -234,8 +248,7 @@
 }
 
 .elementor-element .elementor-inner .elementor-inner-column .content {
-  width: 250px;
-  margin-left: 10px;
+  margin: 10px;
 }
 
 .elementor-element .elementor-inner .elementor-inner-column .content h2 {
@@ -248,6 +261,7 @@
 }
 
 .elementor-element .elementor-inner .elementor-inner-column .content p {
+  line-height: 30px;
   display: block;
   -webkit-margin-before: 1em;
           margin-block-start: 1em;
@@ -257,5 +271,126 @@
           margin-inline-start: 0px;
   -webkit-margin-end: 0px;
           margin-inline-end: 0px;
+}
+
+.elementor-Introduction {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f7;
+}
+
+.elementor-Introduction .Introduction-row {
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 531px;
+  max-width: 1372px;
+  margin: auto;
+}
+
+.elementor-Introduction .Introduction-row .content-column {
+  width: 50%;
+}
+
+.elementor-Introduction .Introduction-row .content-column .divider {
+  margin-top: 10px;
+}
+
+.elementor-Introduction .Introduction-row .content-column .divider span {
+  display: inline-block;
+  width: 60px;
+  border: 1px solid #1ac4f4;
+}
+
+.elementor-Introduction .Introduction-row .content-column .heading {
+  margin-bottom: 30px;
+}
+
+.elementor-Introduction .Introduction-row .content-column .heading h2 {
+  margin-top: 30px;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 42px;
+  letter-spacing: 1.8px;
+}
+
+.elementor-Introduction .Introduction-row .content-column .heading-title h3 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 34px;
+  letter-spacing: 1.08px;
+}
+
+.elementor-Introduction .Introduction-row .content-column .heading-container {
+  color: #888888;
+  font-family: "Lato", Sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0px;
+}
+
+.elementor-Introduction .Introduction-row .content-column .heading-container p {
+  display: block;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+
+.elementor-Introduction .Introduction-row .content-column .heading-button {
+  margin-top: 100px;
+}
+
+.elementor-Introduction .Introduction-row .content-column .heading-button a {
+  padding: 22px 37px 22px 37px;
+  background-color: #398ffc;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 14px;
+  letter-spacing: 0.06px;
+}
+
+.elementor-Introduction .Introduction-row .content-pic {
+  width: 50%;
+  height: auto;
+  padding: 0 20px;
+}
+
+.elementor-Introduction .Introduction-row .content-pic img {
+  width: 100%;
+  height: auto;
+}
+
+.elementor-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.elementor-selection .selection h3 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 34px;
+  letter-spacing: 1.08px;
 }
 /*# sourceMappingURL=Manufax.css.map */

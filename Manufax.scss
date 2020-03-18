@@ -69,6 +69,7 @@ body
     position: absolute;
     justify-content: center;
     .wrap{
+        
         display: flex;
         padding: 20px 10px;
         .logo{
@@ -99,9 +100,12 @@ body
 .jet-slider{
     position: relative;
     .slider-bg{
+        width: 100%;
+        height: 950px;
         img{
             width: 100%;
-            height: 100%;
+            height: 950px;
+            filter:brightness(.5)
         }
     } 
     .jet-slider_content{
@@ -120,8 +124,8 @@ body
             text-transform: uppercase;
             line-height: 146px;
             letter-spacing: 5.6px;
-            padding: 100px 0px 15px 0px;
-            margin: 0px 0px 0px 0px;
+            padding: 300px 0px 15px 0px;
+            margin: 20px 0;
         }
         .jet-slider_subtitle{
             text-align: center;
@@ -131,9 +135,10 @@ body
             font-weight: 400;
             line-height: 50px;
             letter-spacing: 0.2px;
+            margin: 20px 0;
         }
         .jet-slider_button-wrapper{
-            margin-top: 50px;
+            margin-top: 100px;
             font-family: "Montserrat", Sans-serif;
             font-size: 14px;
             font-weight: 400;
@@ -154,6 +159,9 @@ body
 }
 .elementor-element{
     margin-top: 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     .divider{
         width: 100%;
         height: 60px;
@@ -177,26 +185,24 @@ body
         }
     }
     .elementor-inner{
-        margin-top: 30px;
-        width: 100%;
+        text-align: left;
+        margin: auto;
+        flex-wrap:wrap;
         display: flex;
         .elementor-inner-column{
-            position: relative;
+            box-sizing: border-box;
+            width: 33%;
             min-height: 1px;
             display: flex;
-            margin: auto;
             .icon{
                 font-size: 70px;
-                
-
                 i{
                     color: #2ac5f4;
                 }
             }
             .content{
                 
-                width: 250px;
-                margin-left: 10px;
+                margin: 10px;
                 h2{
                     color: #333333;
                     font-family: "Montserrat", Sans-serif;
@@ -207,6 +213,7 @@ body
                     
                 }
                 p{
+                    line-height: 30px;
                     display: block;
                     margin-block-start: 1em;
                     margin-block-end: 1em;
@@ -215,47 +222,106 @@ body
             }
         }
     }
+    }
 }
 .elementor-Introduction{
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f7;
     .Introduction-row{
-        .content-column{
-            .divider{
-                span{
+        padding: 100px 0;
+        display: flex;
+        width: 100%;
+        height: 531px;
+        max-width: 1372px;
+    margin: auto;
 
+
+        .content-column{
+            width: 50%;
+            .divider{
+                margin-top:10px ;
+                span{
+                    display: inline-block;
+                    width: 60px;
+                    border: 1px solid #1ac4f4;
                 }
             }
             .heading{
+                margin-bottom: 30px;
                 h2{
-
+                    margin-top:30px ;
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 30px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    line-height: 42px;
+                    letter-spacing: 1.8px;
                 }
             }
             .heading-title{
                 h3{
-
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 34px;
+                    letter-spacing: 1.08px;
                 }
             }
             .heading-container{
+                    color: #888888;
+                    font-family: "Lato", Sans-serif;
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 30px;
+                    letter-spacing: 0px;
                 p{
-
+                    display: block;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;
                 }
             }
             .heading-button{
+                margin-top: 100px;
                 a{
-
+                    padding: 22px 37px 22px 37px;
+                    background-color: #398ffc;
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 14px;
+                    letter-spacing: 0.06px;
                 }
             }
         }
         .content-pic{
+            width: 50%;
+            height: auto;
+            padding: 0 20px;
             img{
-
+                width: 100%;
+                height: auto;
             }
         }
     }
 }
 .elementor-selection{
+    display: flex;
     .selection{
         h3{
-
+            align-self: center;
+        text-align: center;
+        color: #ffffff;
+        font-family: "Montserrat", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 34px;
+        letter-spacing: 1.08px;
         }
         img{
 
@@ -309,5 +375,4 @@ body
 }
 .footer{
 
-}
 }
