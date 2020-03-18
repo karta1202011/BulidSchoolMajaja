@@ -11,7 +11,7 @@ body
 .Manufax
 {
 
-    font-family: Lato,sans-serif;        
+    font-family: "Lato",sans-serif;        
 }
 .Information{
     width: auto;
@@ -234,7 +234,7 @@ body
         width: 100%;
         height: 531px;
         max-width: 1372px;
-    margin: auto;
+        margin: auto;
 
 
         .content-column{
@@ -310,26 +310,42 @@ body
     }
 }
 .elementor-selection{
-    display: flex;
     .selection{
-        h3{
-            align-self: center;
+        width: 100%;
+        display: flex;
+        .selection-content{
+        width: 25%;
+        height: 358px;
+        position: relative;
+        box-sizing: border-box;
         text-align: center;
-        color: #ffffff;
-        font-family: "Montserrat", Sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        text-transform: uppercase;
-        line-height: 34px;
-        letter-spacing: 1.08px;
+            h3{
+                width: 88%;
+                padding: 0 20px;
+                word-wrap:break-word;
+                color: #ffffff;
+                font-family: "Montserrat", Sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 34px;
+                letter-spacing: 1.08px;
+                position: absolute;
+                top: 180px;
+                z-index: 3;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                filter:brightness(.6);
+            }
         }
-        img{
-
-        }
+        
     }
 
 }
 .elementor-populated{
+    width: 100%;
     .divider{
         span{
 
@@ -341,38 +357,225 @@ body
         }
     }
     .post{
+        display: flex;
         .post-content{
+            width: 31%;
+            margin:0.9765625%;
             a{
                 img{
-
+                    width: 100%;
+                    height: 281px;
                 }
             }
             .inner{
                 h4{
-
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 34px;
+                    letter-spacing: 1.08px;
+                    text-align: left;
                 }
                 .post-meta{
+                    color: #888888;
+                    font-family: "Lato", Sans-serif;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: italic;
+                    line-height: 34px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    padding: 0px 0px 0px 0px;
+                    margin: 0px 0px 0px 0px;
                     span{
                         a{
-                        
+                        color: #2ac5f4;
                         }
                     }
                     span{
                         a{
                             time{
-
+                        color: #2ac5f4;
+                                
                             }
                         }
                     }
                     
                 }
                 p{
-
+                    color: #888888;
+                    font-family: "Lato", Sans-serif;
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 30px;
+                    letter-spacing: 0px;
+                    text-align: left;
                 }
             }
         }
     }
+    .button{
+        margin-top: 100px;
+        text-align: center;
+        a{
+            background-color: #398ffc;;
+            padding: 22px 37px 22px 37px;
+            color: #fff;
+        }
+    }
 }
 .footer{
+    display: block;
+    background-color: #333;
+    margin-top: 100px;
+    padding: 130px 0 0 0;;
+    .top-column{
+        display: flex;
+        .column-content{
+            width: 25%;
+            height: auto;
+            padding: 0px 25px 50px 0px;
+            .logo{
+                margin-bottom: 10px;
+                height: auto;
+                max-width: 100%;
+                border: none;
+                box-shadow: none;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .container{
+                width: 100%;
+                color: #888888;
+                font-family: "Lato", Sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 26px;
+                letter-spacing: 0px;
+                p{
+                    display: inline-block;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;
+                } 
+                a{
+                    display: block;
+                    color: #fff;
+                    margin-bottom: 5px;
+                }   
+                span{
+                    font-family: "Lato", Sans-serif;
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-style: italic;
+                    line-height: 23px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    a{
+                        display: inline;
+                        color: #888888;
+                        
 
+                    }
+                }
+                h4{
+                    font-family: "Lato", Sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 26px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    color: #fff;
+                }
+                
+            }
+            .editor{
+                width: 100%;
+                color: #888888;
+                font-family: "Lato", Sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 26px;
+                letter-spacing: 0px;
+                p{
+                    display: inline-block;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;
+                }
+                a{
+                    font-family: "Lato", Sans-serif;
+                    color: #2ac5f4;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 26px;
+                    letter-spacing: 0px;
+                }
+            }
+            .title{
+                h2{
+                    color:#fff;
+                    font-family: "Montserrat", Sans-serif;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 34px;
+                    letter-spacing: 1.08px;
+                    padding: 30px 0;
+                }
+            }
+            .menu{
+                flex-wrap: nowrap;
+                max-width: 100%;
+                a{
+                    color: #2ac5f4;
+                    padding: 0 0 5px 0;
+                    font-family: "Lato", Sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 26px;
+                    letter-spacing: 0px;
+                    display: block;
+                }
+            }
+
+        }
+    }
+    .elementor-row{
+        display: flex;
+        background: #272727;
+        padding: 15px 0px 8px 0px;
+        box-sizing: border-box;
+        .clear-fix{
+            width: 100%;
+            color: #888888;
+            font-family: "Lato", Sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 26px;
+            letter-spacing: 0px;
+            a{
+                color: #398ffc;
+            }
+        }
+        .Social{
+            width: 33%;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            .icon-list{
+                margin: auto;
+                i{
+                    margin-right: 20px;
+                }
+            }
+            
+        }
+    }
 }
