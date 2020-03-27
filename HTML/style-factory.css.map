@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "style-factory.scss"
+    ],
+    "names": [],
+    "file": "style-factory.css"
+}
