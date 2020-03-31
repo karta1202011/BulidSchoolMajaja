@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <label for=""></label>
+    <input type="text" id='targetUrl' value=''>
+
+    <button onclick="loadUrl()">open</button>
+    <button onclick="closeWindow()">close</button>
+    <button onclick="loadUrl()">載入新網址</button>
+</head>
+
+<body>
+
+    <script>
+        function closeWindow() {
+            window.close();
+        }
+        function loadUrl() {
+            let input = document.getElementById('targetUrl').value;
+            window.location = input;    
+
+            
+        }
+
+    </script>
+</body>
+
+</html>

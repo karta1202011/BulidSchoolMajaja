@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        var products = {
+            iphone: {
+                p01: { id: 'p01', color: 'red', price: '25000', storage: '64g', network: 'wifi', pic: 'p01.jpg', url: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MWYV2_AV1?wid:1144&hei:1144&fmt:jpeg&qlt:80&op_usm:0.5,0.5&.v:1566760164351' },
+                p02: { id: 'p02', color: 'yellow', price: '27000', storage: '128g', network: 'wifi', pic: 'p02.jpg', url: 'https://cdn.shopify.com/s/files/1/0409/7245/products/gold_yellow_1fe0d5d0-9404-4693-bee4-75a856ae1fce_1024x.jpg?v:1571439030' },
+                p03: { id: 'p03', color: 'blue', price: '29000', storage: '256g', network: 'wifi', pic: 'p03.jpg', url: 'https://cdn.shopify.com/s/files/1/0409/7245/products/blue_cfaaa990-de4c-4280-b67f-40d679e2e4df_1024x.jpg?v=1571439030'}
+            },
+            ipad: {},
+            mac: {},
+            watch: {}
+        }
+        p01 = products.iphone.p01;
+        console.log(p01.id, p01.color, p01.storage, p01.network, p01.pic, p01.url);
+
+
+    </script>
+</body>
+
+</html>
