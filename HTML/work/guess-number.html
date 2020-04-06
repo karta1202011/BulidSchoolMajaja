@@ -33,28 +33,22 @@
 </head>
 
 <body>
-  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <div class="col-9 mx-auto">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
+      <div class="row ">
+        <div class="col-md-12 mx-auto">
           <div class="btn-group btn-group-justified">
-            <a id="start" type="button" class="btn btn-default" onclick="newgame()">開始</a>
+            <a id="start" type="button" class="btn btn-default" onclick="random()">開始</a>
             <a id="restart" type="button" class="btn btn-default">放棄重來</a>
-            <a id="cheat" type="button" class="btn btn-default">看答案</a>
+            <a id="cheat" type="button" class="btn btn-default" onclick="watchans()">看答案</a>
           </div>
           <br>
-          <ul id="guessResults" class="list-group">
-            <li class="list-group-item">
-              <span class="label label-danger">0A1B</span>
-              <!--<span class="badge">0A1B</span>-->
-              1234
-            </li>
-          </ul>
+
           <div class="input-group">
             <span class="input-group-addon" id="sizing-addon1">猜答案</span>
             <input id="userGuess" type="text" name="" class="form-control" value="" required="required">
-            <span class="input-group-btn" onclick="newgame()">
-              <a id="guess" type="button" class="btn btn-default">猜!</a>
+            <span class="input-group-btn" onclick="struserguess()">
+              <a id=" guess" type="button" class="btn btn-default">猜!</a>
             </span>
           </div>
         </div>
@@ -65,7 +59,7 @@
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
   <script src="scripts/bootstrap.min.js"></script>
   <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
@@ -79,24 +73,63 @@
   <!--<span class="badge badge-success">4A0B</span>-->
   <!-- 6385
   </li> -->
+
   <script>
+    var guess = "";
+    var ans = [];
 
-    function newgame() {
-      var body = document.getElementsByTagName('body')[0];
-      var ul = document.createElement('ul');
-      body.appendChild(ul);
+    function random() {
+      while (ans.length < 4) {
+        var num = Math.floor(Math.random() * 10);
+        if (ans.includes(num) == false) {
+          ans.push(num);
+        }
+      }
+      alert(ans);
+    }
+    function struserguess() {
+      Guess = document.getElementById('userGuess').value;
+      var guess = String(Guess).split('');
+      var a = 0;
+      var b = 0;
+      var t = 0;
+      for (var k = 0; k < guess.length; k++) {
+        for (var l = 0; l < guess.length; l++) {
+          if (guess[k] == guess[l]) {
+            t = t + 1;
+          }
+        }
+      }
+      alert(t);
+      if (guess.length == 4 && t != 0) {
+        for (var i = 0; i < ans.length; i++) {
+          for (var j = 0; j < ans.length; j++) {
+            if (guess[i] == ans[j] && i == j) {
+              a++;
+            }
+            else if (guess[i] == ans[j] && i != j) {
+              b++;
+            }
+          }
+        }
+        alert(a + "A" + b + "B" + guess);
+      }
+      else if (guess.length != 4 && t == 0) {
+        alert("長度不對還敢重複R");
+      }
+      else if (guess.length != 4 && t == 0) {
+        alert("長度不對拉幹");
+      }
+      else if (guess.length == 4 && t == 0) {
+        alert("重複了拉幹");
+      }
     }
 
-    function guess() {
-      var li = document.createElement('li');
-      var span = document.createElement('span');
-      li.innerHTML = getElementsByTagName('input');
-      span.innerHTML = "1A2B";
-      li.appendChild(span);
-      body.appendChild(li);
 
-
+    function watchans() {
+      alert(ans);
     }
+
 
 
   </script>

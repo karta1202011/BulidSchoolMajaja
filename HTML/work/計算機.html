@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>computer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .top {
+            width: 100%;
+            border: 1px solid #000;
+            height: 100px;
+        }
+
+        .row button {
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        .container input {
+            text-align: right;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-2  mx-auto top d-flex flex-column   justify-content-center my-2">
+            <input id="inputtxt" class=" d-flex justify-content-center my-auto" type="text" value="0">
+            <input id="inputans" class=" d-flex justify-content-center my-auto" type="text">
+        </div>
+        <!-- 抓自己本身的值 -->
+        <div class="row d-flex justify-content-center ">
+            <button onclick="number(this)" class=" mx-1 my-1">1</button>
+            <button onclick="number(this)" class=" mx-1 my-1">2</button>
+            <button onclick="number(this)" class=" mx-1 my-1">3</button>
+            <button onclick="number(this)" class=" mx-1 my-1">+</button>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button onclick="number(this)" class=" mx-1 my-1">4</button>
+            <button onclick="number(this)" class=" mx-1 my-1">5</button>
+            <button onclick="number(this)" class=" mx-1 my-1">6</button>
+            <button onclick="number(this)" class=" mx-1 my-1">-</button>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button onclick="number(this)" class=" mx-1 my-1">7</button>
+            <button onclick="number(this)" class=" mx-1 my-1">8</button>
+            <button onclick="number(this)" class=" mx-1 my-1">9</button>
+            <button onclick="number(this)" class=" mx-1 my-1">*</button>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button onclick="reset()" class=" mx-1 my-1">AC</button>
+            <button onclick="number(this)" class=" mx-1 my-1">0</button>
+            <button onclick="equal()" class=" mx-1 my-1">=</button>
+            <button onclick="number(this)" class=" mx-1 my-1">/</button>
+        </div>
+    </div>
+    <script>
+        var text;
+        function number(z) {
+            text = z.innerText;   //抓點選的button中的值
+            document.getElementById('inputtxt').value += text
+
+        }
+        function equal() {  //自動運算
+            var ans = eval(document.getElementById('inputtxt').value) //抓值
+            document.getElementById('inputans').value = ans  //給值
+        }
+        function reset() {
+            document.getElementById('inputtxt').value = ''; //清空欄位
+            document.getElementById('inputans').value = ''; //清空欄位
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
