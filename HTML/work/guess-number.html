@@ -33,28 +33,33 @@
 </head>
 
 <body>
-  <div class="col-9 mx-auto">
-    <div class="container-fluid">
-      <div class="row ">
-        <div class="col-md-12 mx-auto">
-          <div class="btn-group btn-group-justified">
-            <a id="start" type="button" class="btn btn-default" onclick="random()">開始</a>
-            <a id="restart" type="button" class="btn btn-default">放棄重來</a>
-            <a id="cheat" type="button" class="btn btn-default" onclick="watchans()">看答案</a>
-          </div>
-          <br>
+  <div class="container">
+    <div class="col-6  mx-auto">
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col-md-12 mx-auto">
+            <div class="btn-group btn-group-justified">
+              <a id="start" type="button" class="btn btn-default" onclick="random()">開始</a>
+              <a id="restart" type="button" class="btn btn-default" onclick="reset()">放棄重來</a>
+              <a id="cheat" type="button" class="btn btn-default" onclick="watchans()">看答案</a>
+            </div>
+            <br>
+            <ul id="guessResults" class="list-group">
 
-          <div class="input-group">
-            <span class="input-group-addon" id="sizing-addon1">猜答案</span>
-            <input id="userGuess" type="text" name="" class="form-control" value="" required="required">
-            <span class="input-group-btn" onclick="struserguess()">
-              <a id=" guess" type="button" class="btn btn-default">猜!</a>
-            </span>
+            </ul>
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon1">猜答案</span>
+              <input id="userGuess" type="text" name="" class="form-control" value="" required="required">
+              <span class="input-group-btn" onclick="struserguess()">
+                <a type="button" class="btn btn-default">猜!</a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -88,20 +93,20 @@
       alert(ans);
     }
     function struserguess() {
-      Guess = document.getElementById('userGuess').value;
-      var guess = String(Guess).split('');
+      setGuess = document.getElementById('userGuess').value;
+      var guess = String(setGuess).split('');
       var a = 0;
       var b = 0;
       var t = 0;
       for (var k = 0; k < guess.length; k++) {
         for (var l = 0; l < guess.length; l++) {
           if (guess[k] == guess[l]) {
-            t = t + 1;
+            // alert(guess[k] + guess[l]);
+            t++;
           }
         }
       }
-      alert(t);
-      if (guess.length == 4 && t != 0) {
+      if (guess.length == 4 && t == 4) {
         for (var i = 0; i < ans.length; i++) {
           for (var j = 0; j < ans.length; j++) {
             if (guess[i] == ans[j] && i == j) {
@@ -113,21 +118,52 @@
           }
         }
         alert(a + "A" + b + "B" + guess);
+        var Result = document.getElementById('guessResults');
+        var li = document.createElement('li');
+        li.className = 'list-group-item';
+        Result.appendChild(li);
+        var span = document.createElement('span');
+        span.innerText = `${a}A${b}B`;
+
+        if (a == 4) {
+          span.className = "label label-success";
+
+        }
+        else {
+          span.className = "label label-danger";
+
+        }
+        li.appendChild(span);
+        li.innerHTML += `${setGuess}`;
       }
-      else if (guess.length != 4 && t == 0) {
+      else if (guess.length != 4 && t != 4) {
         alert("長度不對還敢重複R");
       }
-      else if (guess.length != 4 && t == 0) {
+      else if (guess.length != 4) {
         alert("長度不對拉幹");
       }
-      else if (guess.length == 4 && t == 0) {
+      else if (guess.length == 4 && t != 4) {
         alert("重複了拉幹");
       }
+      userGuess.value = "";
+
     }
 
 
     function watchans() {
       alert(ans);
+    }
+
+    function reset() {
+      alert(ans);
+      guess = "";
+      ans = [];
+      userGuess = "";
+      userGuess.value = "";
+
+      var Result = document.getElementById('guessResults');
+      Result.innerHTML = '';
+      clear();
     }
 
 
