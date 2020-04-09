@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="/HTML/Mytools.js"></script>
+    <title>Hello, world!</title>
+    <style>
+        table td,
+        th {
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Template模板</h1>
+    <template id="templateTitle">
+        <tr>
+            <th>產品編號</th>
+            <th>售價</th>
+            <th>儲存容量</th>
+            <th>說明</th>
+        </tr>
+    </template>
+    <template id="templateRow">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+    <script>
+        var _table = $g('table');
+        var body = $g('body');
+        var table = $c('table');
+        var tbody = $c('tbody');
+        var thead = $c('thead');
+        table.setAttribute("border", "2");
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        body.appendChild(table);
+        let ipad = '';
+        window.onload = function () {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                // document.getElementById('msg').innerHTML = this.responseText;
+                ipad = JSON.parse(this.responseText);
+                addThead();
+                ipad.forEach((item) => {
+                    addTbody(Object.values(item));
+                });
+            }
+            xhr.open("GET", 'http://127.0.0.1:5500/iPad.json');
+            xhr.send();
+        };
+        function addThead() {
+            let templateTitle = $g('#templateTitle');
+            thead.appendChild(templateTitle.content);
+        }
+        function addTbody(rowArray) {
+            let templateRow = $g('#templateRow');
+            let cloneContent = templateRow.content.cloneNode(true);
+            let tds = cloneContent.querySelectorAll('td');
+            // debugger;
+            // tds[0].textContent = rowArray[0];
+            // tds[1].textContent = rowArray[1];
+            // tds[2].textContent = rowArray[2];
+            // tds[3].textContent = rowArray[3];
+            rowArray.forEach((item, index) => {
+                tds[index].textContent = rowArray[index];
+            });
+            tbody.appendChild(cloneContent);
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
