@@ -90,7 +90,24 @@
                                 icon: {
                                     url: '/no.ico',
                                     scaledSize: new google.maps.Size(20, 20)
-                                }
+                                },
+                                g: response.features[i]
+                            });
+                            google.maps.event.addListener(markers, 'click', function (mk) {
+                                loadform.close();
+                                console.log(this.g.properties);
+                                loadform.setContent(
+                                    `<div>
+                                        <h1>${this.g.properties.name}</h1>
+                                        <p>
+                                            成人口罩數量:${this.g.properties.masksLeft}<br>
+                                            孩童口罩數量:${this.g.properties.childMasksLeft}
+                                        </p>
+                                    </div>`
+                                )
+                                loadform.position = mk.latLng;
+                                loadform.open(map, this);
+
                             });
 
                         }

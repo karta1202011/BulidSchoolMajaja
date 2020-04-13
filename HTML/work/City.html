@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="../module/20200409-Myhelper.js"> </script> -->
+</head>
+
+<body>
+    <select name="cities" id="cities" onchange="citySelectChange(this.selectedIndex)">
+
+    </select>
+    <select name="district" id="district">
+
+    </select>
+    <button>送出</button>
+
+    <script>
+        var data;
+        window.onload = Address("https://raw.githubusercontent.com/apprunner/FileStorage/master/TaiwanAddress_Simple.json");
+        let citySelect = document.getElementById("cities");
+        let districtSelect = document.getElementById('district');
+        // let option1 = document.createElement('option');
+        // let option2 = document.createElement('option');
+        // option1.value = '';
+        // option1.text = '---請選擇縣市---';
+        // citySelect.add(option1, 0);
+        // option2.value = '';
+        // option2.text = '---請選擇行政區---';
+        // districtSelect.add(option2, 0);
+
+        // option2.setAttribute('selected', '');
+
+
+        function Address(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    data = data;
+                    for (let i = 0; i < data.length; i++) {
+                        option1 = document.createElement('option');
+                        option1.value = data[i].City;
+                        option1.text = data[i].City;
+                        citySelect.add(option1, null);
+
+                    }
+
+                })
+                .catch(ex => {
+                    $g("body").innerHTML = ex;
+                })
+        }
+        function citySelectChange(event) {
+            for (let j = 0; j < data[event].Districts.length; j++) {
+                console.log(data[event].Districts[j].District);
+                option2 = document.createElement('option');
+                // option2.value = data[event].Districts[j].District;
+                option2.textContent = data[event].Districts[j].District;
+                districtSelect.appendChild(option2);
+
+            }
+        }
+
+
+        districtSelect.addEventListener('change', function () {
+            $g("#msg").textContent = citySelect.selectedOptions[0].text + "," + districtSelect.selectedOptions[0].text;
+        });
+
+        // https://bs10510015wayne.azurewebsites.net/JavaScript/JavaScriptExamples/Taiwan-Address.json
+    </script>
+</body>
+
+</html>
