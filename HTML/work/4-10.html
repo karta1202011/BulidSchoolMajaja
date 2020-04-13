@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var map;
+        var markers;
+        var loadform;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 24.757121, lng: 120.952350 },
+                zoom: 10
+            });
+            loadform = new google.maps.InfoWindow({
+                maxWidth: 200
+            });
+
+
+            $.ajax({
+                type: "GET",
+                // url: "https://maskmap.azurewebsites.net/api/mask/getmaskstock",
+                url: "https://findmasks.herokuapp.com/places",
+                success: function (response) {
+
+                    let left = [];
+                    let right = [];
+                    let adult = [];
+
+                    for (var i = 0; i < response.features.length; i++) {
+                        // The marker, positioned at Uluru
+
+                        left[i] = response.features[i].geometry.coordinates[1];
+                        right[i] = response.features[i].geometry.coordinates[0];
+                        adult[i] = response.features[i].properties.masksLeft;
+                        if (adult[i] > 0) {
+                            markers = new google.maps.Marker({
+                                position: { lat: left[i], lng: right[i] },
+                                map: map,
+                                icon: {
+                                    url: '/have.ico',
+                                    scaledSize: new google.maps.Size(20, 20)
+                                },
+                                g: response.features[i]
+                            });
+                            google.maps.event.addListener(markers, 'click', function (mk) {
+                                loadform.close();
+                                console.log(this.g.properties);
+                                loadform.setContent(
+                                    `<div>
+                                        <h1>${this.g.properties.name}</h1>
+                                        <p>
+                                            成人口罩數量:${this.g.properties.masksLeft}<br>
+                                            孩童口罩數量:${this.g.properties.childMasksLeft}
+                                        </p>
+                                    </div>`
+                                )
+                                loadform.position = mk.latLng;
+                                loadform.open(map, this);
+
+                            });
+                        }
+                        else if (adult[i] <= 0) {
+                            markers = new google.maps.Marker({
+                                position: { lat: left[i], lng: right[i] },
+                                map: map,
+                                icon: {
+                                    url: '/no.ico',
+                                    scaledSize: new google.maps.Size(20, 20)
+                                }
+                            });
+
+                        }
+
+                    }
+                },
+                error: function (response) { }
+
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS1UMQDIQyDpmMWALDxHBYSpH4hADzGu0&callback=initMap"
+        async defer></script>
+</body>
+
+</html>
