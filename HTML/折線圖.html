@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js">
+
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+            </script>
+    </head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron alert-success">
+            <h2>以Line Chart折線圖繪製月均溫趨勢變化</h2>
+        </div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        $.ajax({
+            type: "Get",
+            url: " https://raw.githubusercontent.com/apprunner/FileStorage/master/Temperature.json",
+            success: function (response) {
+                _data = JSON.parse(response);
+                var ctx = document.getElementById("myChart");
+
+                var chart = new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        labels: _data.Label,
+                        datasets: [{
+                            label: _data.City,
+                            data: _data.Data,
+                            fill: false,
+                            backgroundColor: 'rgba(255,165,0,0.3)',
+                            borderColor: 'rgb(255,165,0)',
+                            pointStyle: "circle",
+                            pointBackgroundColor: 'rgb(0,255,0)',
+                            pointRadius: 5,
+                            pointHoverRadius: 10,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        title: {
+                            display: true,
+                            fontSize: 26,
+                            text: '台北1 - 6月氣溫平均值'
+                        },
+                        tooltips: {
+                            mode: 'point',
+                            intersect: true,
+                        },
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                fontColor: 'black',
+                            }
+                        }
+                    }
+                });
+
+            }
+        })
+
+    </script>
+
+</body>
