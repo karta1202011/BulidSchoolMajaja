@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+</head>
+<style>
+    .champion_data {
+
+        /* width: 100%; */
+        /* height: 100%; */
+        height: 10px;
+        padding-top: 25%;
+
+    }
+
+    .champion_data h5 {
+        color: #ffffff;
+        background-color: black;
+        margin: -1px -14.6px;
+        padding: 8px 0;
+    }
+</style>
+
+<body>
+
+    <div class="col-12">
+        <div class="contain">
+            <div class="row data">
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <template id="templateRow">
+
+        <button class="champion_data col-md-3 col-6" type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#z">
+            <h5></h5>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal copy" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+
+
+    <script>
+
+
+        var champion = [
+            {
+                "Name": "Khazix",
+                "url": "https://lolskin.weblog.vc/img/images/loading/Khazix_3.jpg",
+                "icon": "https://lolskin.weblog.vc/img/images/tiles/Khazix_3.jpg",
+                "ability": {
+                    "type": "Assassin"
+                }
+            },
+            {
+                "Name": "Rengar",
+                "url": "https://lolskin.weblog.vc/img/images/loading/Rengar_2.jpg",
+                "icon": "https://lolskin.weblog.vc/img/images/tiles/Rengar_2.jpg",
+
+                "ability": {
+                    "type": "Assassin"
+                }
+            },
+            {
+                "Name": "Shaco",
+                "url": "https://lolskin.weblog.vc/img/images/loading/Shaco_6.jpg",
+                "icon": "https://lolskin.weblog.vc/img/images/tiles/Shaco_6.jpg",
+
+                "ability": {
+                    "type": "Assassin"
+                }
+            },
+            {
+                "Name": "Renekton",
+                "url": "https://lolskin.weblog.vc/img/images/loading/Renekton_17.jpg",
+                "icon": "https://lolskin.weblog.vc/img/images/tiles/Renekton_17.jpg",
+
+                "ability": {
+                    "type": "Assassin"
+                }
+            }
+        ]
+        var templateRow = document.getElementById('templateRow');
+
+
+        var data = document.querySelector('.data');
+
+        for (let i = 0; i < champion.length; i++) {
+            let cloneContent = templateRow.content.cloneNode(true);
+            let champion_data = cloneContent.querySelector('.champion_data');
+            let h5 = cloneContent.querySelector('.champion_data>h5');
+
+            let copy = cloneContent.querySelector('.copy');
+            let modal_title = cloneContent.querySelector('.modal-title');
+            let modal_body = cloneContent.querySelector('.modal-body');
+            let img = document.createElement('img');
+            img.setAttribute('src', `${champion[i].icon}`);
+            modal_body.appendChild(img);
+
+            champion_data.setAttribute('style', `background-image: url("${champion[i].url}");`);
+            champion_data.setAttribute('data-target', `#${champion[i].Name}`);
+            copy.setAttribute('id', `${champion[i].Name}`);
+
+            h5.textContent = champion[i].Name;
+
+            modal_title.textContent = champion[i].Name;
+            for (let j = 0; j < Object.values(champion[0].ability).length; j++) {
+                let h5 = document.createElement('h5');
+
+                h5.textContent = `${Object.keys(champion[i].ability)[j]} : ${champion[i].ability[Object.keys(champion[i].ability)[j]]}`;
+                modal_body.appendChild(h5);
+            }
+            data.appendChild(cloneContent);
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
