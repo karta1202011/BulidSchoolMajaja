@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+    <script>
+        let msg = document.getElementById('msg');
+
+        function calcBMI(){
+            let height =document.getElementById('height').value;
+            let weight =document.getElementById('weight').value;
+
+            let bmi =(height,weight)=>{return weight /((height/100)**2)}
+            let bmi2 =(height,weight)=>weight /((height/100)**2)
+            msg.innerHTML='BMI='+bmi2(height,)
+        }
+    </script>
+</body>
+</html>

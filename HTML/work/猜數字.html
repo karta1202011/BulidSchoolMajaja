@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>終極密碼</title>
+    <link rel="icon" href="/magic.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<style>
+    .answer {
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="border border-dark">
+                    <label for="" class="my-5 answer" id="range">0~100</label>
+                </div>
+                <div>
+                    <button class="my-3 bg-light border-white" id="start">來個數字</button>
+                </div>
+                <div>
+                    <input type="text" class="my-2" id="guess">
+                </div>
+                <div>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">1</button>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">2</button>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">3</button>
+                </div>
+                <div>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">4</button>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">5</button>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">6</button>
+                </div>
+                <div>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">7</button>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">8</button>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">9</button>
+                </div>
+                <div>
+                    <button class="btn border-white bg-danger " id="remove">X</button>
+                    <button class="btn border-white bg-secondary " onclick="number(this)">0</button>
+                    <button class="btn border-white bg-success " id="check">O</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var error = document.getElementById('error');
+        var range = document.getElementById('range');
+        var guess = document.getElementById('guess');
+        var maxrange = 100;
+        var minrange = 0;
+        var randomnum;
+
+        start.onclick = function () {
+            randomnum = Math.floor(Math.random() * 100 + 1);
+            maxrange = 100;
+            minrange = 0;
+            range.innerHTML = minrange + "~" + maxrange;
+
+        }
+        remove.onclick = function () {
+            guess.value = null;
+        }
+        function number(x) {
+            guess.value += x.innerText;
+        }
+
+        check.onclick = function () {
+            if (guess.value >= maxrange || guess.value <= minrange) {
+                range.innerHTML = "請輸入範圍內的數字";
+                guess.value = "";
+            }
+            else if (guess.value < randomnum && guess.value > minrange) {
+                minrange = guess.value;
+                range.innerHTML = minrange + "~" + maxrange;
+                guess.value = "";
+
+            }
+            else if (guess.value > randomnum && guess.value < maxrange) {
+                maxrange = guess.value;
+                range.innerHTML = minrange + "~" + maxrange;
+                guess.value = "";
+
+            }
+            else {
+                range.innerHTML = "答對了! 答案是:" + randomnum;
+                guess.value = "";
+            }
+        }
+        function getNumber() {
+            randomnum = Math.floor((Math.random() * 100) + 1);
+            answer.innerHTML = '0~100';
+            answer.value = '';
+            minnum = 0;
+            maxnum = 100;
+        }
+        window.onload = getNumber();
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

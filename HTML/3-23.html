@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <h1 id="title">Show Name</h1>
+
+    <div class="bg-danger">
+        Lastname
+    </div>
+    <div class="bg-primary">First Name</div>
+    <div class="bg-success">Full Name</div>
+    <img id="pic01" src="" alt="">
+    <button id="btn1" onclick="showName()">majaja</button>
+    <button id="btn2" onclick="showName()">majaja</button>
+
+    <script>
+        var firstname = " 孫", lastname = "至凡", age = 21, gender = false;
+
+
+        var fullname = lastname + firstname;
+        var title = document.getElementById("title");
+        // title.innerHTML = "顯示我的名字";
+        title.textContent = fullname;
+        var div1 = document.querySelector(".bg-danger");
+        var div2 = document.querySelector(".bg-primary");
+        var div3 = document.querySelector(".bg-success");
+        console.log(div1);
+        console.log(div2);
+        console.log(div3);
+
+        div1.textContent = lastname;
+        div2.textContent = firstname;
+        div3.textContent = fullname;
+
+        var img = document.getElementById("pic01");
+        img.src = "https://media.tenor.com/images/0b5aca462bec7cb4baad3f2eaa5761c8/tenor.gif";
+        img.width = "300";
+        img.height = "300";
+
+        var btn1 = document.getElementById("btn1");
+
+        //JavaScript & Java Style
+        function showName() {
+            alert(fullname)
+        }
+        var btn2 = document.getElementById("btn2");
+
+        //JavaScript & Java Style
+        btn2.onclick = showName;
+
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <button onclick="add()">+</button>
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <div>
+        <p>window</p>
+        <p>document</p>
+        <p>html</p>
+    </div>
+    <ul>
+        <li>Node</li>
+        <li>NodeList</li>
+        <li>HTMLCollection</li>
+    </ul>
+
+    <script type="module">
+        import { $g } from '../HTML/Mytools.js';
+
+        var h1 = $g('hi');
+        console.log(h1);
+        console.log(typeof h1);
+
+
+        var div = $g("div");
+        var ul = $g("ul");
+
+        console.log(div);
+        console.log(ul);
+        for (let i = 0; i < div.children.length; i++) {
+            document.write(div.children[i].innerHTML + '<br>');
+        }
+        document.write('<hr>');
+        for (let i = 0; i < ul.children.length; i++) {
+            document.write(ul.children[i].innerHTML + '<br>');
+        }
+
+        [...div.children].forEach((item, index) => {
+            document.write(index + "." + item.innerHTML + '<br>');
+        });
+
+        
+
+
+        function add() {
+            var h1 = document.createElement('h1');
+            h1.innerHTML = '奚江華';
+            var body = document.getElementsByTagName('body')[0];
+            body.appendChild(h1);
+
+            var div = document.createElement('div');
+            var p01 = document.createElement('p');
+            var p02 = document.createElement('p');
+            var p03 = document.createElement('p');
+            p01.innerHTML = "Windows";
+            p02.innerHTML = "document";
+            p03.innerHTML = "html";
+            div.appendChild(p01);
+            div.appendChild(p02);
+            div.appendChild(p03);
+            body.appendChild(div);
+
+            var ul = document.createElement('ul');
+            var li01 = document.createElement('li');
+            var li02 = document.createElement('li');
+            var li03 = document.createElement('li');
+            li01.innerHTML = "node";
+            li02.innerHTML = "nodelist";
+            li03.innerHTML = "HTMLCollection";
+            ul.appendChild(li01);
+            ul.appendChild(li02);
+            ul.appendChild(li03);
+            body.appendChild(ul);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

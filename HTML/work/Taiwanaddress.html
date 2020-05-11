@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/HTML/Mytools.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <template id="templateRow">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+    <script>
+        var body = $g('body');
+        var _table = document.createElement('table');
+        body.appendChild(_table);
+        let zipcodeArray = '';
+        window.onload = function () {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    zipcodeArray = JSON.parse(this.responseText);
+                    let ZipCode = [];
+                    zipcodeArray.forEach((item, index) => {
+                        // ZipCode.push({ City: "台北市", Districts: [{ District: "中正區" }, { ZipCode: "100" }] });
+                        // ZipCode.push({ City: "台北市" });
+
+                        let _city = item.CityName;
+                        let _districts = [];
+                        item.AreaList.forEach((item, index) => {
+                            _districts.push({ _districts: item.AreaName, ZipCode: item.ZipCode });
+
+                        });
+
+                        let _cityObject = { City: _city, Districts: _districts };
+                        ZipCode.push(_cityObject);
+                    });
+                    ZipCode.forEach((item) => {
+                        addTbody(item);
+                    })
+                }
+                else {
+                    msg.textContent = '發生錯誤 HTTP response代碼:' + xhr.status;
+                }
+            }
+            xhr.open("Get", "http://127.0.0.1:5500/HTML/work/Taiwanaddress.json");
+            xhr.send();
+        };
+        function addTbody(rowarray) {
+            rowarray.Districts.forEach(item => {
+                let templateRow = $g('#templateRow');
+                let cloneContent = templateRow.content.cloneNode(true);
+                let tds = cloneContent.querySelectorAll('td');
+                tds[0].textContent = rowarray.City;
+                tds[1].textContent = item._districts;
+                tds[2].textContent = item.ZipCode;
+                // debugger;
+                _table.appendChild(cloneContent);
+            });
+        }
+    </script>
+</body>
+
+</html>
