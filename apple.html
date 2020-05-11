@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .container button {
+            background-color: #fff;
+            width: 100%;
+            height: 100px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align:center; font-weight:bold;">購買iPad</h1>
+        <div class="row">
+            <div class="col-12 col-md-6 w-100">
+                <img src="" alt="" id="ipad_img">
+            </div>
+            <div class="col-12 col-md-6">
+                <div style="font-size: 30px;">顏色</div>
+                <div class="row" id="color">
+                    <div class="col-6 col-md-4">
+                        <button class="white" onclick="c_silver()">銀色</button>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <button class="black" onclick="c_gold()">玫瑰金色</button>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <button class="red" onclick="c_bc()">太空灰色</button>
+                    </div>
+                </div>
+                <div style="font-size: 30px;">儲存容量</div>
+                <div class="row" id="type">
+                    <div class="col-6 col-md-4">
+                        <button class="t1" onclick="ram64()">
+                            64GB
+                            <br>
+                            NT$24,900
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <button class="t2" onclick="ram128()">
+                            128GB
+                            <br>
+                            NT$26,900
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <button class="t3" onclick="ram256()">
+                            256GB
+                            <br>
+                            NT$30,400
+                        </button>
+                    </div>
+                </div>
+                <div style="font-size: 30px;">價格</div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="price" style="font-weight:bold; font-size: 50px;">NT$24,900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var ipad = {
+            color: {
+                silver: { img: '/phone/ipad_silver.png' },
+                gold: { img: '/phone/ipad_gold.png' },
+                bc: { img: '/phone/ipad_bc.png' }
+            },
+            type: {
+                p1: { price: 'NT$24,900' },
+                p2: { price: 'NT$26,900' },
+                p3: { price: 'NT$30,400' }
+            }
+        };
+
+        var img = document.getElementById('ipad_img');
+        function c_silver() {
+            img.setAttribute('src', ipad.color.silver.img);
+        }
+        function c_gold() {
+            img.setAttribute('src', ipad.color.gold.img);
+        }
+        function c_bc() {
+            img.setAttribute('src', ipad.color.bc.img);
+        }
+
+
+        var price = document.getElementById('price');
+        function ram64() {
+            price.innerText = ipad.type.p1.price;
+        }
+        function ram128() {
+            price.innerText = ipad.type.p2.price;
+        }
+        function ram256() {
+            price.innerText = ipad.type.p3.price;
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
